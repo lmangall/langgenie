@@ -1,25 +1,14 @@
-// Assuming this file is a TypeScript file (.tsx extension)
-import React, { CSSProperties } from 'react';
-// Import your components or write your page content here
+import React from 'react';
+import { Link } from 'react-router-dom'; // Assuming you're using React Router for navigation
 
 const LoveLetterPage = () => {
-  // Define the style object for centering content using CSSProperties for type checking
-  const centerStyle: CSSProperties = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    height: '100vh',
-    textAlign: 'center',
-    padding: '20px',
-  };
-
   return (
-    <div style={centerStyle}>
-      {/* Your page content */}
-      <p>Lang Genie uses AI to help you be fluent in your target language.</p>
-      <p>Heya,</p>
-      <p>I am working on that at the moment, you can shoot me a mail at contact@frenchezleo.com or follow/reach out with the classic socials: my GitHub (https://github.com/lmangall/), Instagram (https://www.instagram.com/french_chez_leo/), and LinkedIn (https://www.linkedin.com/in/l-mangallon/). Moreover, if you have an interest in language learning you might want to sign up for the newsletter to get updates on my soon to come apps (fun ones like https://langgenie.xyz/loveletter and more practical ones to come).</p>
+    <div className="flex flex-col items-center justify-center h-screen text-center p-5">
+      <div className="max-w-lg mx-auto">
+        <p>Lang Genie uses AI to help you be fluent in your target language.</p>
+        <p>Heya,</p>
+        <p>I am working on that at the moment, you can shoot me a mail at <a href="mailto:contact@frenchezleo.com" className="text-blue-500 hover:text-blue-700">contact@frenchezleo.com</a> or follow/reach out with the classic socials: my <a href="https://github.com/lmangall/" className="text-blue-500 hover:text-blue-700">GitHub</a>, <a href="https://www.instagram.com/french_chez_leo/" className="text-blue-500 hover:text-blue-700">Instagram</a>, and <a href="https://www.linkedin.com/in/l-mangallon/" className="text-blue-500 hover:text-blue-700">LinkedIn</a>. Moreover, if you have an interest in language learning you might want to sign up for the newsletter to get updates on my soon to come apps (fun ones like <Link to="/loveletter" className="text-blue-500 hover:text-blue-700">Lang Genie Love Letter</Link> and more practical ones to come).</p>
+      </div>
     </div>
   );
 };
