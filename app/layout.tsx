@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 // Metadata for the web page
 export const metadata: Metadata = {
-  title: "Gimme love",
+  title: "Learn a language whith AI"
   description: "WIP frenchezleo.com",
 };
 
