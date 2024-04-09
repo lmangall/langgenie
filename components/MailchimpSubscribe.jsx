@@ -28,9 +28,9 @@ const SimpleForm = ({ onFormSubmit, subscriptionStatus }) => {
 	return (
 	  <form onSubmit={handleSubmit}>
 		<input className="bg-white h-[30px] bg-opacity-40 hover:bg-purple-100 hover:bg-opacity-20 font-normal border-2 border-white-600 rounded-lg focus:outline-none focus:border-red-100 resize-none"type="email" name="email" placeholder="Your email" required />
-		<button type="submit" style={buttonStyle} disabled={subscriptionStatus === "success"}>
+		{/* <button type="submit" style={buttonStyle} disabled={subscriptionStatus === "success"}>
 		  {buttonText}
-		</button>
+		</button> */}
 	  </form>
 	);
   };

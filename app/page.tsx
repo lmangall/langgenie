@@ -6,13 +6,13 @@ import { MailSubscribe } from '../components/MailchimpSubscribe';
 
 const LoveLetterPage = () => {
   return (
-    <div className="flex flex-col items-center justify-left h-screen text-center p-5">
+    <div className="flex flex-col items-center justify-center h-screen text-left p-5">
       <div className="max-w-lg mx-auto">
         {/* Adding font-bold for bold text and mb-4 for margin bottom */}
         <p className="font-bold">Why LangGenie?</p>
         <p className="text-3xl">🧞</p>
         <p className="mb-4">LangGenie will be a collection of AI apps to help master fluency while having fun.</p>
-        <p className="font-bold"> Heya,</p>
+        <p> Heya,</p>
         <p>As you can see I am working on that at the moment,</p>
         <p>you can shoot me a mail at <a href="mailto:contact@frenchezleo.com" className="text-blue-500 hover:text-blue-700">contact@frenchezleo.com</a> </p>
         <p>or connect through the classic socials:</p>
