@@ -6,7 +6,7 @@ const LoveLetterPage = () => {
   // Define the style object for centering content
   const centerStyle = {
     display: 'flex', // Use Flexbox for layout
-    flexDirection: 'column', // Stack children vertically
+    // flexDirection: 'column', // Stack children vertically
     alignItems: 'center', // Center children horizontally in the container
     justifyContent: 'center', // Center children vertically in the container
     height: '100vh', // Full height of the viewport
