@@ -8,7 +8,7 @@ import useTranslateText from "../../hooks/useTranslateText";
 import SettingsModal from "../components/SettingsModal";
 import stripHtml from "../../utils/stripHtml";
 import LoveLetterBackground from "../../components/LoveLetterBackground"; // Import your SVG component
-import "./globals.css"; // IS IT NECESSARY TO IMPORT HERE => layout.tsx
+import "../../app/globals.css"; // IS IT NECESSARY TO IMPORT HERE => layout.tsx
 import AboutModal from "../../components/AboutModal";
 
 export default function Home() {
