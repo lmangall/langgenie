@@ -2,32 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.gradient-blue-sky {
+  background-image: var(--gradient-stops-blue-sky);
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: pink; /* Ensure full background is pink */
 }
+
+
+/* Styles for tablets and below */
+@media (max-width: 768px) {
+  body {
+    padding: 20px;
+  }
+}
+
+/* Styles for mobile devices */
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .p-24 {
+    padding: 10px;
+  }
+}
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+.enhancement-list li {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333;
+  margin-left: 20px;
+}
+
+/* Adjusted spinner CSS */
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.2); /* Make the spinner thinner */
+  width: 20px; /* Smaller width */
+  height: 20px; /* Smaller height */
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  display: inline-block; /* Added for inline display */
+  vertical-align: middle; /* Align to the middle vertically */
+  margin-right: 8px; /* Adjust spacing between spinner and text */
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* global.css */
+
+@font-face {
+  font-family: 'willow';
+  src: url('/fonts/willow.otf') format('opentype'),
+       url('/fonts/willow.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*/below is for the logo*/
+.logo-container {
+  max-width: 100px; /* or any maximum size you prefer */
+  margin: 0 auto; /* Center the logo */
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo-container {
+    max-width: 300px; /* Smaller size for tablets and below */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-container {
+    max-width: 50px; /* Even smaller size for mobile devices */
   }
 }

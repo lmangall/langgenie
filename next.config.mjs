@@ -1,15 +1,4 @@
-
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  async redirects() {
-    return [
-      {
-        source: '/loveletter',
-        destination: 'https://loveletter-seven.vercel.app/',
-        permanent: true,
-      },
-    ];
-  },
-};
+const nextConfig = {};
 
 export default nextConfig;
