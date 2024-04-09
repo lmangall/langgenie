@@ -37,17 +37,15 @@ const AboutModal = ({ isOpen, onClose }) => {
       <h2 style={{ textAlign: 'center' }}>About This App</h2>
       <h2 style={{ textAlign: 'center' }}>🥖 + 🍑 = 💌</h2>
       <p style={{ textAlign: 'center' }}>This app is designed to help users learn new languages through the power of AI-generated love letters.</p>
-      <p style={{ textAlign: 'center', marginBottom: '20px' }}>
-        This app marries my background in French education with my new coding skills.
-      </p>
+      <p style={{ textAlign: 'center', marginBottom: '20px' }}> But really, it&apos;s more to have a good laugh while getting luv in your favourite language</p>
+
       <p style={{ textAlign: 'center' }}>
-      I got more language learning apps in the making: fun one and usefull ones. Stay updated by signing up for our newsletter.
+      I got more language learning apps in the making: fun one and usefull ones. Stay updated:
       </p>
+        <MailSubscribe />
+        <p className="mt-10">The tech stack (my first time with all of those) Node.js, Next.js, JavaScript, React, and Tailwind CSS.</p>
       <p style={{ textAlign: 'center' }}>
-        The tech stack (my first time with all of those) Node.js, Next.js, JavaScript, React, and Tailwind CSS.
-      </p>
-      <p style={{ textAlign: 'center' }}>
-        This application integrates two APIs: OpenAI for text creation and text-to-speech functionality, and DeepL for translating text.
+        This application integrates three APIs: OpenAI for text creation and text-to-speech functionality, and DeepL for translating text.
       </p>
       
       {/* Tech Stack Images */}
@@ -57,7 +55,6 @@ const AboutModal = ({ isOpen, onClose }) => {
         ))}
       </div>
 
-      <MailSubscribe />
       <button onClick={onClose} style={{
         backgroundColor: 'rgba(255, 255, 255, 0.75)', 
         color: 'rgba(0, 0, 0, 0.7)', 
