@@ -1,5 +1,5 @@
 // pages/loveletter/index.tsx
-import React from 'react';
+import React, { CSSProperties } from 'react';
 // Import your components or write your page content here
 
 const LoveLetterPage = () => {
