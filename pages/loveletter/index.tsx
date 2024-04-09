@@ -5,7 +5,7 @@ import Image from "next/image";
 import InputField from "../../components/InputField";
 import useFetchLoveStory from "../../hooks/useFetchLoveStory";
 import useTranslateText from "../../hooks/useTranslateText";
-import SettingsModal from "../components/SettingsModal";
+import SettingsModal from "../../components/SettingsModal";
 import stripHtml from "../../utils/stripHtml";
 import LoveLetterBackground from "../../components/LoveLetterBackground"; // Import your SVG component
 import "../../app/globals.css"; // IS IT NECESSARY TO IMPORT HERE => layout.tsx
