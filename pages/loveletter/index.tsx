@@ -193,12 +193,12 @@ export default function Home() {
           </div>
           <button
             onClick={handleOpenModal}
-            className="mb-4 h-10 w-full bg-gray-50 bg-opacity-30  text-slate-400 border border-2  rounded hover:border-red-500 mt-4"
+            className="mb-4 h-10 w-full bg-gray-50 bg-opacity-30  text-slate-400 border-2  rounded hover:border-red-500 mt-4"
           >
             Preferences
           </button>
           <div
-            className="bg-white w-full h-full max-h-80 bg-opacity-40 p-4 text-base font-normal border-2 border-gray-300 rounded-lg shadow-sm resize-none overflow-auto"
+            className="bg-white w-full h-full max-h-80 bg-opacity-40 p-4 text-base font-normal border-2 rounded-lg shadow-sm resize-none overflow-auto"
             aria-readonly="true"
             onMouseUp={handleTextSelection}
           >
@@ -251,7 +251,7 @@ export default function Home() {
         <div className="flex flex-col top-[10%] backdrop-blur-sm bg-white-300/30 space-y-4">
           {/* right column*/}
           <div className="p-6 backdrop-blur-sm bg-white bg-opacity-40 rounded-lg border border-1 rgba(255, 255, 255, 0.1) h-[80vh]">
-            <div className="mb-4 bg-white w-full h-5/6 bg-opacity-40 p-2 text-base font-normal border-2 border-gray-300 rounded-lg shadow-sm resize-none overflow-auto">
+            <div className="mb-4 bg-white w-full h-5/6 bg-opacity-40 p-2 text-base font-normal border-2 border-white-300 rounded-lg shadow-sm resize-none overflow-auto">
               <div>
                 {translations.length > 0 ? (
                   <div>
@@ -301,18 +301,20 @@ export default function Home() {
             bottom: "20px",
             right: "20px",
             zIndex: 1000,
-            width: "150px",
+            width: "100px",
           }}
         >
          
          <button
   onClick={handleOpenModal}
-  className="w-full mt-2 bg-white/80 rounded-xl py-2 text-red-500 font-bold rounded shadow-sm transition duration-150 border-red-500 border-2 hover:border-white-500 flex items-center justify-center"
+  className="flex flex-col items-center justify-center w-16 h-16 mt-2 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white"
 >
-  <span className="spin-emoji mr-2">❤️</span>
-  About
-  <span className="spin-emoji ml-2">❤️</span>
+  <span className="spin-emoji block text-xl">❤️</span>
+  {/* About❓ */}
 </button>
+
+
+
 
 
 
