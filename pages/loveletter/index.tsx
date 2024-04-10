@@ -144,12 +144,12 @@ export default function Home() {
   return (
     <div className="relative">
    
+      <LoveLetterBackground />
+      <div className="grid  grid-cols-2 w-full gap-4 content-center  m-auto p-24 justify-center ">
 <AboutModal
   isOpen={isAboutModalOpen}
   onClose={() => setIsAboutModalOpen(false)}
 />
-      <LoveLetterBackground />
-      <div className="grid  grid-cols-2 w-2/3 gap-4 content-center  m-auto p-24 justify-center ">
         <div className="p-6 backdrop-blur-sm bg-white bg-opacity-40 rounded-lg border border-1 rgba(255, 255, 255, 0.1) h-[80vh]">
           <div className="logo-container-2">
             <a
@@ -310,7 +310,7 @@ export default function Home() {
 
         </div>
         <div className="flex justify-center items-end fixed bottom-0 left-0 right-0 p-4">
-        <button
+<button
   onClick={handleOpenAboutModal}
   className="w-10 h-10 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white mb-4"
 >
