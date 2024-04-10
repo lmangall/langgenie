@@ -57,13 +57,19 @@ export default function Home() {
   };
 
 
-const handleTouchEnd = async () => {
-  const selection = window.getSelection();
-  if (selection && selection.toString()) {
-    const text = selection.toString();
-    await translateText(text);
-  }
-};
+  const handleTouchEnd = async () => {
+    if (/Mobi|Android/i.test(navigator.userAgent)) {
+      // Check if the user is accessing the application from a mobile device
+      const selection = window.getSelection();
+      if (selection && selection.toString()) {
+        const text = selection.toString();
+        // Add a delay of one second before calling translateText
+        setTimeout(async () => {
+          await translateText(text);
+        }, 1000); // 1000 milliseconds = 1 second
+      }
+    }
+  };
 
 
   const handleEmailTranslations = () => {
