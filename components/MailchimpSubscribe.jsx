@@ -4,7 +4,7 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 const url = "https://frenchezleo.us18.list-manage.com/subscribe/post?u=78c0ad5362b2cb0b6678423a4&amp;id=b4b4c73250&amp;f_id=002b10e1f0";
 
 const buttonStyle = {
-	backgroundColor: '#4CAF50', // white background
+	backgroundColor: '#FFFFFF', // white background
 	color: 'white', // White text
 	borderRadius: '8px',
 	padding: '4px 12px', 
