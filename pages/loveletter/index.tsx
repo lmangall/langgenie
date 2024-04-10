@@ -310,13 +310,12 @@ export default function Home() {
 
         </div>
         <div className="flex justify-center items-end fixed bottom-0 left-0 right-0 p-4">
-  <button
-    onClick={handleOpenAboutModal} // Make sure this function is defined to handle opening the About modal
-    
-    className="w-16 h-16 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white mb-4"
-  >
-    <span className="spin-emoji block text-xl">❤️</span>
-  </button>
+        <button
+  onClick={handleOpenAboutModal}
+  className="w-10 h-10 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white mb-4"
+>
+  <span className="spin-emoji block text-xl">❤️</span>
+</button>
 </div>
 
       </div>
