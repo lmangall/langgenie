@@ -40,7 +40,7 @@ const AboutModal = ({ isOpen, onClose }) => {
       <p style={{ textAlign: 'center', marginBottom: '20px' }}> But really, it&apos;s more to have a good laugh while getting luv in your favourite language</p>
 
       <p style={{ textAlign: 'center' }}>
-      I got more language learning apps in the making: fun one and usefull ones. Stay updated:
+      There&apos;s more to come, stay on the loop!
       </p>
         <MailSubscribe />
         <p className="mt-10">The tech stack (my first time with all of those) Node.js, Next.js, JavaScript, React, and Tailwind CSS.</p>
@@ -62,7 +62,7 @@ const AboutModal = ({ isOpen, onClose }) => {
         borderRadius: '8px',
         padding: '8px 16px',
         cursor: 'pointer',
-        marginTop: '20px',
+        marginTop: '40px',
       }}>
         Close
       </button>
