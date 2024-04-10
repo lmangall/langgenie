@@ -179,7 +179,7 @@ export default function Home() {
             isHot={isHot}
             setIsHot={setIsHot}
           />
-          <div className="flex flex-row space-x-4">
+          <div className="flex flex-row space-x-4 ">
             <InputField
               placeholder="Enter your city."
               value={userCity}
@@ -193,12 +193,14 @@ export default function Home() {
           </div>
           <button
             onClick={handleOpenModal}
-            className="mb-4 h-10 w-full bg-gray-50 bg-opacity-30  text-slate-400 border-2  rounded hover:border-red-500 mt-4"
+            // className="mb-4 h-10 w-full bg-gray-50 bg-opacity-50  text-slate-400 rounded hover:bg-opacity-60 mt-4"
+            className="mb-4 h-10 mt-2 w-full bg-white/75 text-slate-400 font-bold rounded shadow-sm transition duration-150 border border-2 hover:border-red-500"
+
           >
-            Preferences
+            Settings
           </button>
           <div
-            className="bg-white w-full h-full max-h-80 bg-opacity-40 p-4 text-base font-normal border-2 rounded-lg shadow-sm resize-none overflow-auto"
+            className="bg-white w-full h-full max-h-80 bg-opacity-40 p-4 text-base font-normal rounded-lg shadow-sm resize-none overflow-auto"
             aria-readonly="true"
             onMouseUp={handleTextSelection}
           >
@@ -251,7 +253,7 @@ export default function Home() {
         <div className="flex flex-col top-[10%] backdrop-blur-sm bg-white-300/30 space-y-4">
           {/* right column*/}
           <div className="p-6 backdrop-blur-sm bg-white bg-opacity-40 rounded-lg border border-1 rgba(255, 255, 255, 0.1) h-[80vh]">
-            <div className="mb-4 bg-white w-full h-5/6 bg-opacity-40 p-2 text-base font-normal border-2 border-white-300 rounded-lg shadow-sm resize-none overflow-auto">
+            <div className="mb-4 bg-white w-full h-5/6 bg-opacity-40 p-2 text-base font-normal rounded-lg shadow-sm resize-none overflow-auto">
               <div>
                 {translations.length > 0 ? (
                   <div>
@@ -304,7 +306,7 @@ export default function Home() {
             width: "100px",
           }}
         >
-         
+
          <button
   onClick={handleOpenModal}
   className="flex flex-col items-center justify-center w-16 h-16 mt-2 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white"
@@ -312,16 +314,6 @@ export default function Home() {
   <span className="spin-emoji block text-xl">❤️</span>
   {/* About❓ */}
 </button>
-
-
-
-
-
-
-
-
-
-
         </div>
       </div>
       {error && <p className="text-red-500">{error}</p>}
