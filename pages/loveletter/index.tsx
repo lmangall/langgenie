@@ -306,14 +306,14 @@ export default function Home() {
             width: "100px",
           }}
         >
-
-         <button
+<button
   onClick={handleOpenModal}
-  className="flex flex-col items-center justify-center w-16 h-16 mt-2 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white"
+  className="flex flex-col items-center justify-center w-16 h-16 mt-2 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white sm:w-12 sm:h-12 sm:text-base"
 >
-  <span className="spin-emoji block text-xl">❤️</span>
+  <span className="spin-emoji block text-xl sm:text-lg">❤️</span>
   {/* About❓ */}
 </button>
+
         </div>
       </div>
       {error && <p className="text-red-500">{error}</p>}
