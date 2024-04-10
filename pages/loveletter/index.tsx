@@ -301,22 +301,25 @@ export default function Home() {
             bottom: "20px",
             right: "20px",
             zIndex: 1000,
+            width: "150px",
           }}
         >
          
-          <div
-            className="position-fixed bottom-0 left-40 right-40 z-index-100"
-            style={{ display: "flex", justifyContent: "center" }}
-          >
-            {/* <button onClick={handleAboutModal} className="about-button">
-              About
-            </button> */}
-            <AboutModal
-              isOpen={isAboutModalOpen}
-              onClose={() => setIsAboutModalOpen(false)}
-            />
-            <button onClick={handleOpenAboutModal}>About</button>
-          </div>
+         <button
+  onClick={handleOpenModal}
+  className="w-full mt-2 bg-white/80 rounded-xl py-2 text-red-500 font-bold rounded shadow-sm transition duration-150 border-red-500 border-2 hover:border-white-500 flex items-center justify-center"
+>
+  <span className="spin-emoji mr-2">❤️</span>
+  About
+  <span className="spin-emoji ml-2">❤️</span>
+</button>
+
+
+
+
+
+
+
         </div>
       </div>
       {error && <p className="text-red-500">{error}</p>}

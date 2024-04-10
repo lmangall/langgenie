@@ -46,7 +46,6 @@ body {
   margin-left: 20px;
 }
 
-/* Adjusted spinner CSS */
 .spinner {
   border: 2px solid rgba(255, 0, 0, 0.718); /* Make the spinner thinner */
   width: 20px; /* Smaller width */
@@ -66,8 +65,26 @@ body {
     transform: rotate(360deg);
   }
 }
-
 /* global.css */
+.spin-emoji {
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+/* Style for the spinning "About" button */
+.about-btn-spin {
+  animation: spinBorder 2s linear infinite;
+}
 
 @font-face {
   font-family: 'willow';
