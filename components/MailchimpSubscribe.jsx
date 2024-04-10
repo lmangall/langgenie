@@ -46,7 +46,7 @@ const SimpleForm = ({ onFormSubmit, subscriptionStatus }) => {
 const MailSubscribe = () => {
   const [buttonText, setButtonText] = useState("Subscribe");
 
-  const handleSubscribe = (formData) => {
+  const handleSubscribe = (formData, subscribe) => {
     // Update button text to "sending..." when form is submitted
     setButtonText("sending...");
     // Assuming subscribe is a function passed from the MailchimpSubscribe component
@@ -59,9 +59,10 @@ const MailSubscribe = () => {
       render={({ subscribe, status, message }) => (
       <div>
         {/* Pass the subscribe function and button text to SimpleForm */}
-        <SimpleForm onFormSubmit={formData => handleSubscribe(formData)} buttonText={buttonText} />
+        {/* Update the onFormSubmit call to include subscribe */}
+        <SimpleForm onFormSubmit={formData => handleSubscribe(formData, subscribe)} buttonText={buttonText} />
         {status === "error" && <div dangerouslySetInnerHTML={{__html: message}}/>}
-        {status === "Thank you" && setButtonText("Subscribed!") && <div>Signed in</div>}
+        {status === "success" && <div>You are signed in!</div>}
       </div>
       )}
     />

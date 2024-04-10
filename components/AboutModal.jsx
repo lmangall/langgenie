@@ -1,6 +1,6 @@
 import React from 'react';
 import Modal from 'react-modal';
-import { MailSubscribe } from './MailchimpSubscribe'; // Make sure the path is correct
+import { MailSubscribe } from './MailchimpSubscribe'; 
 import Image from 'next/image'; // Import the Image component from next/image
 
 
