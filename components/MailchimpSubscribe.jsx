@@ -5,8 +5,7 @@ const url = "https://frenchezleo.us18.list-manage.com/subscribe/post?u=78c0ad536
 
 const buttonStyle = {
 	backgroundColor: '#FFFFFF', // white background
-	color: 'white', // White text
-	borderRadius: '8px',
+	color: 'rgba(0, 0, 0, 0.7)',	borderRadius: '8px',
 	padding: '4px 12px', 
 	cursor: 'pointer',
 	marginTop: '10px',
