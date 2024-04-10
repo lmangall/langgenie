@@ -28,7 +28,7 @@ const SimpleForm = ({ onFormSubmit, subscriptionStatus }) => {
 	return (
 	  <form onSubmit={handleSubmit}>
 <input
-	className="bg-gray-100 width-300 h-[30px] font-normal border-2 border-gray-200 rounded-lg focus:outline-none focus:border-white-500 resize-none"
+	className="bg-gray-100 width-400 h-[30px] font-normal border-2 border-gray-200 rounded-lg focus:outline-none focus:border-white-500 resize-none"
 	type="email"
 	name="email"
 	placeholder="Your email"
