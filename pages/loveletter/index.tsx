@@ -56,6 +56,16 @@ export default function Home() {
     }
   };
 
+
+const handleTouchEnd = async () => {
+  const selection = window.getSelection();
+  if (selection && selection.toString()) {
+    const text = selection.toString();
+    await translateText(text);
+  }
+};
+
+
   const handleEmailTranslations = () => {
     const emailBody =
       translations.map(stripHtml).join("\n").replace(/#/g, "%23") +
@@ -213,6 +223,7 @@ export default function Home() {
             className="bg-white w-full h-full max-h-80 bg-opacity-40 p-4 text-base font-normal rounded-lg shadow-sm resize-none overflow-auto"
             aria-readonly="true"
             onMouseUp={handleTextSelection}
+            onTouchEnd={handleTouchEnd} 
           >
             {loveStory || (
               <span className="text-grey">
