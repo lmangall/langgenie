@@ -5,10 +5,10 @@ import Image from "next/image";
 import InputField from "../../components/InputField";
 import useFetchLoveStory from "../../hooks/useFetchLoveStory";
 import useTranslateText from "../../hooks/useTranslateText";
-import SettingsModal from "../../components/SettingsModal";
 import stripHtml from "../../utils/stripHtml";
 import LoveLetterBackground from "../../components/LoveLetterBackground"; // Import your SVG component
 import "../../app/globals.css"; // IS IT NECESSARY TO IMPORT HERE => layout.tsx
+import SettingsModal from "../../components/SettingsModal";
 import AboutModal from "../../components/AboutModal";
 
 export default function Home() {
@@ -26,7 +26,12 @@ export default function Home() {
   const [isLoadingRead, setIsLoadingRead] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
-  const handleOpenAboutModal = () => setIsAboutModalOpen(true);
+
+  const handleOpenAboutModal = (event: React.MouseEvent) => {
+    event.stopPropagation(); // Prevent the event from bubbling if necessary
+    setIsAboutModalOpen(true); // Attempt to open the About modal
+    console.log("About modal state after opening:", isAboutModalOpen);
+  };
 
   const handleOpenModal = (event: React.MouseEvent) => {
     event.stopPropagation(); // Prevent click from propagating
@@ -37,9 +42,9 @@ export default function Home() {
     setIsModalOpen(false);
   };
 
-  // const handleAboutModal = () => {
-  //   // Implement actions for the "About" button (e.g., navigate to a new page)
-  // };
+  const handleCloseAboutModal = () => {
+    setIsAboutModalOpen(false);
+  }
 
   const { translateText, translations, translationError } = useTranslateText();
 
@@ -138,6 +143,11 @@ export default function Home() {
 
   return (
     <div className="relative">
+   
+<AboutModal
+  isOpen={isAboutModalOpen}
+  onClose={() => setIsAboutModalOpen(false)}
+/>
       <LoveLetterBackground />
       <div className="grid  grid-cols-2 w-2/3 gap-4 content-center  m-auto p-24 justify-center ">
         <div className="p-6 backdrop-blur-sm bg-white bg-opacity-40 rounded-lg border border-1 rgba(255, 255, 255, 0.1) h-[80vh]">
@@ -296,27 +306,19 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div
-          className="logo-container"
-          style={{
-            position: "fixed",
-            bottom: "20px",
-            right: "20px",
-            zIndex: 1000,
-            width: "100px",
-          }}
-        >
-<button
-  onClick={handleOpenModal}
-  className="flex flex-col items-center justify-center w-16 h-16 mt-2 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white sm:w-12 sm:h-12 sm:text-base"
->
-  <span className="spin-emoji block text-xl sm:text-lg">❤️</span>
-  {/* About❓ */}
-</button>
+
 
         </div>
+        <div className="flex justify-center items-end fixed bottom-0 left-0 right-0 p-4">
+  <button
+    onClick={handleOpenAboutModal} // Make sure this function is defined to handle opening the About modal
+    
+    className="w-16 h-16 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white mb-4"
+  >
+    <span className="spin-emoji block text-xl">❤️</span>
+  </button>
+</div>
+
       </div>
-      {error && <p className="text-red-500">{error}</p>}
-    </div>
   );
 }

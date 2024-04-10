@@ -64,7 +64,7 @@ function SettingsModal({
   return (
     <div className="fixed inset-0 bg-white bg-opacity-50 backdrop-blur-sm flex justify-center items-center z-50">
       <div ref={modalRef} className="p-6 bg-pink-300 bg-opacity-50 fixed top-[10%] left-1/2 transform -translate-x-1/2 rounded-lg border border-1 overflow-hidden">
-        <h2 className="text-xl text-center font-bold mb-4">Settings</h2>
+        <h2 className="text-xl text-center font-bold mb-4">Preferences</h2>
         {/* Gender Select */}
         <div className="">
           <SelectField
