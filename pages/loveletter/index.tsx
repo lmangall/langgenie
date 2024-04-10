@@ -145,7 +145,7 @@ export default function Home() {
     <div className="relative">
    
       <LoveLetterBackground />
-      <div className="grid  grid-cols-2 w-full gap-4 content-center  m-auto p-24 justify-center ">
+      <div className="grid grid-cols-2 lg:grid-cols-2 lg:w-2/3 w-full gap-4 content-center m-auto p-24 justify-center">
 <AboutModal
   isOpen={isAboutModalOpen}
   onClose={() => setIsAboutModalOpen(false)}

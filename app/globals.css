@@ -26,6 +26,7 @@ body {
   }
 }
 
+
 /* Styles for mobile devices */
 @media (max-width: 480px) {
   .grid {
