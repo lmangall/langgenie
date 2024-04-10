@@ -1,6 +1,7 @@
 import React from 'react';
 import Modal from 'react-modal';
 import { MailSubscribe } from './MailchimpSubscribe'; // Make sure the path is correct
+import Image from 'next/image'; // Import the Image component from next/image
 
 const customStyles = {
   content: {
@@ -23,8 +24,8 @@ const customStyles = {
 const AboutModal = ({ isOpen, onClose }) => {
   // Assuming your project's 'public' directory is served at the root URL
   const techStackImages = [
-    { src: "/tech_stack_picture/openai.png", alt: "OpenAI" },
-    { src: "/tech_stack_picture/DeepL.png", alt: "Deepl" },
+    { src: "/tech_stack_picture/openai.png", alt: "OpenAI", width: 40, height: 40 },
+    { src: "/tech_stack_picture/DeepL.png", alt: "Deepl", width: 40, height: 40 },
   ];
 
   return (
@@ -50,8 +51,8 @@ const AboutModal = ({ isOpen, onClose }) => {
       
       {/* Tech Stack Images */}
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', marginTop: '20px' }}>
-        {techStackImages.map((image, index) => (
-          <img key={index} src={image.src} alt={image.alt} style={{ maxWidth: '40px', maxHeight: '40px' }} />
+        {techStackImages.map((image) => (
+          <Image key={image.alt} src={image.src} alt={image.alt} width={image.width} height={image.height} />
         ))}
       </div>
 

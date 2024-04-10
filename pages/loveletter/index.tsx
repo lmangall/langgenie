@@ -28,7 +28,7 @@ export default function Home() {
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
   const handleOpenAboutModal = () => setIsAboutModalOpen(true);
 
-  const handleOpenModal = (event) => {
+  const handleOpenModal = (event: React.MouseEvent) => {
     event.stopPropagation(); // Prevent click from propagating
     setIsModalOpen(true);
   };
@@ -303,20 +303,7 @@ export default function Home() {
             zIndex: 1000,
           }}
         >
-          <a
-            href="https://frenchezleo.com"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              src="/logo.png"
-              alt="Frenchez Leo Logo"
-              width={50}
-              height={25}
-              priority
-              layout="responsive"
-            />
-          </a>
+         
           <div
             className="position-fixed bottom-0 left-40 right-40 z-index-100"
             style={{ display: "flex", justifyContent: "center" }}
