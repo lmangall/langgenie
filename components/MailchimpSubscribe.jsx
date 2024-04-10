@@ -26,9 +26,9 @@ const SimpleForm = ({ onFormSubmit, subscriptionStatus }) => {
 	const buttonText = subscriptionStatus === "success" ? "Subscribed" : "Subscribe";
   
 	return (
-	  <form onSubmit={handleSubmit}>
+	  <form className="width-400"  onSubmit={handleSubmit}>
 <input
-	className="bg-white-100 width-400 h-[30px] font-normal border-2 border-gray-200 rounded-lg focus:outline-none focus:border-white-500 resize-none"
+	className="bg-white-100 h-[30px] font-normal border-2 border-gray-200 rounded-lg focus:outline-none focus:border-white-500 resize-none"
 	type="email"
 	name="email"
 	placeholder="Your email"
