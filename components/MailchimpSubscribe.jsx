@@ -4,7 +4,7 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 const url = "https://frenchezleo.us18.list-manage.com/subscribe/post?u=78c0ad5362b2cb0b6678423a4&amp;id=b4b4c73250&amp;f_id=002b10e1f0";
 
 const buttonStyle = {
-	backgroundColor: '#4CAF50', // Green background
+	backgroundColor: '#4CAF50', // white background
 	color: 'white', // White text
 	borderRadius: '8px',
 	padding: '4px 12px', 
@@ -29,7 +29,7 @@ const SimpleForm = ({ onFormSubmit, subscriptionStatus }) => {
 	return (
 	  <form onSubmit={handleSubmit}>
 <input
-	className="bg-gray-100 h-[30px] font-normal border-2 border-gray-200 rounded-lg focus:outline-none focus:border-green-500 resize-none"
+	className="bg-gray-100 width-300 h-[30px] font-normal border-2 border-gray-200 rounded-lg focus:outline-none focus:border-white-500 resize-none"
 	type="email"
 	name="email"
 	placeholder="Your email"
