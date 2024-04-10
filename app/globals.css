@@ -48,7 +48,7 @@ body {
 
 /* Adjusted spinner CSS */
 .spinner {
-  border: 2px solid rgba(255, 255, 255, 0.2); /* Make the spinner thinner */
+  border: 2px solid rgba(255, 0, 230, 0.2); /* Make the spinner thinner */
   width: 20px; /* Smaller width */
   height: 20px; /* Smaller height */
   border-radius: 50%;
