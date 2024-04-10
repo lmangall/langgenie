@@ -26,11 +26,10 @@ export default function Home() {
   const [isLoadingRead, setIsLoadingRead] = useState(false);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
-
   const handleOpenAboutModal = () => setIsAboutModalOpen(true);
 
-  //modify this so it reflexts the settings modal
-  const handleOpenModal = () => {
+  const handleOpenModal = (event) => {
+    event.stopPropagation(); // Prevent click from propagating
     setIsModalOpen(true);
   };
 
