@@ -13,8 +13,8 @@ const LoveLetterPage = () => {
         <p className="mb-10">As you can see this part is still WIP</p>
         <p className="font-bold">Why LangGenie?</p>
         <p className="text-3xl">🧞</p>
-        <p> LangGenie will be a collection of AI language learning apps to master fluency while having fun.</p>
-        <p> I am starting with <Link href="/loveletter"><a className="text-blue-500 hover:text-blue-700">Loveletter</a></Link>, but more is coming</p>
+        <p> LangGenie will be a collection of AI apps to learn a language while having fun.</p>
+        <p> I am starting with <Link href="/loveletter" className="text-blue-500 hover:text-blue-700">Loveletter</Link>, but more is coming</p>
         <p> Stay on the loop !</p>
         <MailSubscribe />
 
