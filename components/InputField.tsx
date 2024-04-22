@@ -12,7 +12,7 @@ const InputField: React.FC<InputFieldProps> = ({
   onChange,
 }) => (
   <textarea
-    className="text-center w-full justify-center py-1 bg-white h-[30px] bg-opacity-50 hover:bg-opacity-60 font-normal rounded focus:outline-none focus:border-red-500 resize-none"
+    className="text-center w-full justify-center py-1 bg-white h-[30px] bg-opacity-50 hover:bg-opacity-60 font-normal rounded-lg focus:outline-none focus:border-red-500 resize-none"
     placeholder={placeholder}
     value={value}
     onChange={onChange}

@@ -44,7 +44,7 @@ export default function Home() {
 
   const handleCloseAboutModal = () => {
     setIsAboutModalOpen(false);
-  }
+  };
 
   const { translateText, translations, translationError } = useTranslateText();
 
@@ -55,7 +55,6 @@ export default function Home() {
       await translateText(text);
     }
   };
-
 
   const handleTouchEnd = async () => {
     if (/Mobi|Android/i.test(navigator.userAgent)) {
@@ -70,7 +69,6 @@ export default function Home() {
       }
     }
   };
-
 
   const handleEmailTranslations = () => {
     const emailBody =
@@ -159,13 +157,12 @@ export default function Home() {
 
   return (
     <div className="relative">
-   
       <LoveLetterBackground />
       <div className="grid grid-cols-2 lg:grid-cols-2 lg:w-2/3 w-full gap-4 content-center m-auto p-24 justify-center">
-<AboutModal
-  isOpen={isAboutModalOpen}
-  onClose={() => setIsAboutModalOpen(false)}
-/>
+        <AboutModal
+          isOpen={isAboutModalOpen}
+          onClose={() => setIsAboutModalOpen(false)}
+        />
         <div className="p-6 backdrop-blur-sm bg-white bg-opacity-40 rounded-lg border border-1 rgba(255, 255, 255, 0.1) h-[80vh]">
           <div className="logo-container-2">
             <a
@@ -221,7 +218,6 @@ export default function Home() {
             onClick={handleOpenModal}
             // className="mb-4 h-10 w-full bg-gray-50 bg-opacity-50  text-slate-400 rounded hover:bg-opacity-60 mt-4"
             className="mb-4 h-10 mt-2 w-full bg-white/75 text-slate-400 font-bold rounded shadow-sm transition duration-150 border border-2 hover:border-red-500"
-
           >
             Settings
           </button>
@@ -229,7 +225,7 @@ export default function Home() {
             className="bg-white w-full h-full max-h-80 bg-opacity-40 p-4 text-base font-normal rounded-lg shadow-sm resize-none overflow-auto"
             aria-readonly="true"
             onMouseUp={handleTextSelection}
-            onTouchEnd={handleTouchEnd} 
+            onTouchEnd={handleTouchEnd}
           >
             {loveStory || (
               <span className="text-grey">
@@ -260,7 +256,7 @@ export default function Home() {
               )}
               Generate {/* Text remains visible */}
             </button>
-            <button
+            {/* <button
               onClick={() => readText(loveStory)}
               className="w-full mt-2 bg-white/75 py-2 text-red-500 font-bold rounded shadow-sm transition duration-150 border border-2 hover:border-red-500"
             >
@@ -268,7 +264,7 @@ export default function Home() {
                 <div className="spinner"></div> // Spinner appears next to the text
               )}
               Read Text
-            </button>
+            </button> */}
           </div>
           {/* 
           <audio id="audioPlayer" src="" hidden></audio>{" "}
@@ -323,18 +319,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-
-        </div>
-        <div className="flex justify-center items-end fixed bottom-0 left-0 right-0 p-4">
-<button
-  onClick={handleOpenAboutModal}
-  className="w-8 h-8 bg-white/80 text-red-500 font-bold rounded-full shadow-sm transition duration-150 border-2 border-red-500 hover:border-white mb-4"
->
-  <span className="spin-emoji block text-xl">❓</span>
-</button>
-</div>
-
       </div>
+      <div className="flex justify-center items-end fixed bottom-0 left-0 right-0 p-4">
+        <button
+          onClick={handleOpenAboutModal}
+          className="w-16 h-8 bg-white/80 text-red-500 font-bold rounded-lg shadow-sm transition duration-150 border-2 border-red-500 hover:border-white mb-4"
+        >
+          <div>MORE</div>
+          {/* <span className="spin-emoji block text-xl">❓</span> */}
+        </button>
+      </div>
+    </div>
   );
 }
