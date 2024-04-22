@@ -25,8 +25,8 @@ const customStyles = {
 const AboutModal = ({ isOpen, onClose }) => {
   // Assuming your project's 'public' directory is served at the root URL
   const techStackImages = [
-    { src: "/tech_stack_picture/openai.png", alt: "OpenAI", width: 40, height: 40 },
-    { src: "/tech_stack_picture/DeepL.png", alt: "Deepl", width: 40, height: 40 },
+    { src: "/tech_stack_picture/openai.png", alt: "OpenAI", width: 30, height: 20 },
+    { src: "/tech_stack_picture/DeepL.png", alt: "Deepl", width: 25, height: 20 },
   ];
 
   return (
