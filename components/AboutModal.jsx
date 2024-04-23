@@ -36,26 +36,25 @@ const AboutModal = ({ isOpen, onClose }) => {
       contentLabel="About Modal"
       style={customStyles}
     >
-      <h1 className="font-bold">About This Loveletter</h1>
       <h1 className="text-3xl">🤖 + 🧠 = 💌</h1>
-      <p style={{ textAlign: 'center' }}>This app is designed to help users learn new languages through the power of AI-generated love letters.</p>
-      <p style={{ textAlign: 'center', marginBottom: '20px' }}> But really, it&apos;s more to have a good laugh while getting luv in your favourite language</p>
+      <h1 className="font-bold">There&apos;s more to come</h1>
+      <h1 className="font-bold">If you learn a language stay in the loop</h1>
 
-      <p style={{ textAlign: 'center' }}>
-      There&apos;s more to come, stay on the loop!
-      </p>
         <MailSubscribe />
-        <p className="mt-10">The tech stack (my first time with all of those) Node.js, Next.js, JavaScript, React, and Tailwind CSS.</p>
-      <p style={{ textAlign: 'center' }}>
+        {/* <p className="mt-10">The tech stack (my first time with all of those) Node.js, Next.js, JavaScript, React, and Tailwind CSS.</p> */}
+      {/* <p style={{ textAlign: 'center', marginBottom: '20px' }}>
         This application integrates three APIs: OpenAI for text creation and text-to-speech functionality, and DeepL for translating text.
-      </p>
-      
-      {/* Tech Stack Images */}
+      </p> */}
+      {/* <p style={{ textAlign: 'center' }}>There will be more language learning apps</p>
+      <p style={{ textAlign: 'center', marginBottom: '10px' }}> Even</p> */}
+ <a href="mailto:contact@frenchezleo.com" className="font-bold mt20 hover:text-blue-700">                      Leo ❤️</a> 
+{/*       
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '20px', marginTop: '20px' }}>
         {techStackImages.map((image) => (
           <Image key={image.alt} src={image.src} alt={image.alt} width={image.width} height={image.height} />
         ))}
-      </div>
+      </div> 
+      */}
 
       <button onClick={onClose} style={{
         backgroundColor: 'rgba(255, 255, 255, 0.75)', 
