@@ -30,7 +30,7 @@ This app is a labor of love, combining my passion for French language teaching a
 ## H. Other
 
 <details>
-  <summary>**A Week of Exploration, a Week of Refinement**
+  <summary>A Week of Exploration, a Week of Refinement
 </summary>
   <br/>
 This project serves as a testament to the power of rapid learning. The initial version was built within a week and a second week was dedicated to refining the application. This experience served as my introduction to this tech stack (before I only worked with C, learning the 42Berlin curriculum)
