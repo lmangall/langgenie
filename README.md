@@ -1,6 +1,6 @@
 # Project Description
 
-[demo link](https://loveletter-seven.vercel.app/)
+[Live demo](https://langgenie.xyz/loveletter)
 
 A web app designed to help you learn a language, initially thought for French, hence the love-theme 🥖 The app is inclusive of all gender identities and sexual orientations 🏳️‍🌈 and is not afraid to produce HOT content...
 
